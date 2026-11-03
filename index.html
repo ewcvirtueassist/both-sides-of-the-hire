@@ -1,0 +1,820 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Both Sides of the Hire | For Filipino Virtual Assistants</title>
+  <meta name="description" content="Join the Both Sides of the Hire talent pool. Free resume optimization, honest matching, and real opportunities with long-term clients. Founded 2018." />
+  
+  <!-- Open Graph -->
+  <meta property="og:title" content="Both Sides of the Hire | For Filipino Virtual Assistants" />
+  <meta property="og:description" content="Honest talk about working with clients. Join our talent pool. We help you present your strengths clearly and match you thoughtfully." />
+  <meta property="og:type" content="website" />
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet" />
+  
+  <style>
+    :root {
+      --primary: #0A1F44;
+      --primary-dark: #06152e;
+      --accent: #C9A227;
+      --accent-hover: #b08e1f;
+      --bg: #f8f9fb;
+      --bg-alt: #eef1f6;
+      --text: #1a1a1a;
+      --text-muted: #5a6472;
+      --white: #ffffff;
+      --border: #e2e6ed;
+      --success: #2d6a4f;
+      --radius: 12px;
+      --shadow: 0 4px 24px rgba(15, 76, 92, 0.08);
+      --shadow-lg: 0 12px 40px rgba(15, 76, 92, 0.12);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Inter', system-ui, -apple-system, sans-serif;
+      color: var(--text);
+      background: var(--bg);
+      line-height: 1.6;
+      font-size: 17px;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 1140px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* ========== HEADER ========== */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 72px;
+    }
+
+    .logo {
+      font-family: 'Playfair Display', serif;
+      font-weight: 700;
+      font-size: 1.25rem;
+      color: var(--primary);
+      letter-spacing: -0.02em;
+      line-height: 1.2;
+    }
+
+    .logo span {
+      color: var(--accent);
+    }
+
+    .logo-sub {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.7rem;
+      font-weight: 500;
+      color: var(--text-muted);
+      letter-spacing: 0.02em;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 28px;
+    }
+
+    nav a {
+      font-size: 0.95rem;
+      font-weight: 500;
+      color: var(--text-muted);
+      transition: color 0.2s;
+    }
+
+    nav a:hover {
+      color: var(--primary);
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 14px 28px;
+      font-weight: 600;
+      font-size: 1rem;
+      border-radius: 8px;
+      border: none;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      text-align: center;
+    }
+
+    .btn-primary {
+      background: var(--accent);
+      color: var(--white);
+      box-shadow: 0 4px 14px rgba(201, 162, 39, 0.3);
+    }
+
+    .btn-primary:hover {
+      background: var(--accent-hover);
+      transform: translateY(-1px);
+      box-shadow: 0 6px 20px rgba(201, 162, 39, 0.35);
+    }
+
+    .btn-secondary {
+      background: var(--white);
+      color: var(--primary);
+      border: 2px solid var(--primary);
+    }
+
+    .btn-secondary:hover {
+      background: var(--primary);
+      color: var(--white);
+    }
+
+    .btn-outline {
+      background: transparent;
+      color: var(--white);
+      border: 2px solid rgba(255, 255, 255, 0.7);
+    }
+
+    .btn-outline:hover {
+      background: var(--white);
+      color: var(--primary);
+    }
+
+    .btn-sm {
+      padding: 10px 20px;
+      font-size: 0.9rem;
+    }
+
+    /* ========== HERO ========== */
+    .hero {
+      background: linear-gradient(160deg, #0A1F44 0%, #122A5C 50%, #06152e 100%);
+      color: var(--white);
+      padding: 80px 0 90px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: -20%;
+      right: -10%;
+      width: 600px;
+      height: 600px;
+      background: radial-gradient(circle, rgba(201, 162, 39, 0.15) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .hero-content {
+      max-width: 720px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255, 255, 255, 0.12);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      padding: 6px 14px;
+      border-radius: 50px;
+      font-size: 0.85rem;
+      font-weight: 500;
+      margin-bottom: 24px;
+    }
+
+    .hero h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2.3rem, 5vw, 3.2rem);
+      font-weight: 700;
+      line-height: 1.15;
+      letter-spacing: -0.02em;
+      margin-bottom: 20px;
+    }
+
+    .hero h1 .highlight {
+      color: #C9A227;
+    }
+
+    .hero-sub {
+      font-size: 1.2rem;
+      opacity: 0.92;
+      max-width: 580px;
+      margin-bottom: 32px;
+      line-height: 1.55;
+    }
+
+    .hero-ctas {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-bottom: 28px;
+    }
+
+    .hero-note {
+      font-size: 0.95rem;
+      opacity: 0.88;
+      max-width: 520px;
+    }
+
+    /* ========== TRUST BAR ========== */
+    .trust-bar {
+      background: var(--white);
+      border-bottom: 1px solid var(--border);
+      padding: 18px 0;
+    }
+
+    .trust-bar-inner {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      gap: 32px;
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      font-weight: 500;
+    }
+
+    .trust-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .trust-item svg {
+      color: var(--success);
+      flex-shrink: 0;
+    }
+
+    /* ========== SECTION COMMON ========== */
+    section {
+      padding: 80px 0;
+    }
+
+    .section-label {
+      display: inline-block;
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 12px;
+    }
+
+    .section-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.9rem, 4vw, 2.6rem);
+      font-weight: 700;
+      line-height: 1.2;
+      letter-spacing: -0.02em;
+      margin-bottom: 16px;
+      color: var(--primary-dark);
+    }
+
+    .section-sub {
+      font-size: 1.15rem;
+      color: var(--text-muted);
+      max-width: 640px;
+      margin-bottom: 48px;
+    }
+
+    .text-center {
+      text-align: center;
+    }
+
+    .text-center .section-sub {
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    /* ========== WHY JOIN ========== */
+    .why {
+      background: var(--white);
+    }
+
+    .why-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 28px;
+    }
+
+    .why-card {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 32px;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .why-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow);
+    }
+
+    .why-icon {
+      width: 48px;
+      height: 48px;
+      background: linear-gradient(135deg, var(--primary), #122A5C);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 20px;
+      color: white;
+    }
+
+    .why-card h3 {
+      font-size: 1.25rem;
+      font-weight: 700;
+      margin-bottom: 10px;
+      color: var(--primary-dark);
+    }
+
+    .why-card p {
+      color: var(--text-muted);
+      font-size: 1rem;
+    }
+
+    /* ========== HOW IT WORKS ========== */
+    .process {
+      background: var(--bg-alt);
+    }
+
+    .process-steps {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px;
+    }
+
+    .step {
+      position: relative;
+      background: var(--white);
+      border-radius: var(--radius);
+      padding: 28px 24px;
+      box-shadow: var(--shadow);
+      text-align: center;
+    }
+
+    .step-number {
+      width: 40px;
+      height: 40px;
+      background: var(--accent);
+      color: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 1.1rem;
+      margin: 0 auto 16px;
+    }
+
+    .step h3 {
+      font-size: 1.1rem;
+      font-weight: 700;
+      margin-bottom: 8px;
+      color: var(--primary-dark);
+    }
+
+    .step p {
+      font-size: 0.95rem;
+      color: var(--text-muted);
+    }
+
+    /* ========== HONEST TALK ========== */
+    .honest {
+      background: var(--white);
+    }
+
+    .honest-box {
+      background: linear-gradient(160deg, #0A1F44 0%, #06152e 100%);
+      color: var(--white);
+      border-radius: 16px;
+      padding: 48px 40px;
+      max-width: 800px;
+      margin: 0 auto;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .honest-box::before {
+      content: '';
+      position: absolute;
+      top: -30%;
+      right: -10%;
+      width: 300px;
+      height: 300px;
+      background: radial-gradient(circle, rgba(201, 162, 39, 0.2) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .honest-box h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.9rem;
+      margin-bottom: 20px;
+      position: relative;
+    }
+
+    .honest-box p {
+      font-size: 1.1rem;
+      opacity: 0.95;
+      margin-bottom: 16px;
+      line-height: 1.65;
+      position: relative;
+    }
+
+    .honest-box p:last-child {
+      margin-bottom: 0;
+    }
+
+    /* ========== YOUTUBE / CTA ========== */
+    .cta-section {
+      background: var(--bg-alt);
+      text-align: center;
+    }
+
+    .cta-box {
+      max-width: 640px;
+      margin: 0 auto;
+    }
+
+    .cta-box .section-title {
+      margin-bottom: 12px;
+    }
+
+    .cta-box p {
+      color: var(--text-muted);
+      font-size: 1.1rem;
+      margin-bottom: 28px;
+    }
+
+    .cta-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 14px;
+      margin-bottom: 24px;
+    }
+
+    .youtube-note {
+      font-size: 0.95rem;
+      color: var(--text-muted);
+    }
+
+    .youtube-note a {
+      color: var(--accent);
+      font-weight: 600;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+
+    /* ========== FOOTER ========== */
+    footer {
+      background: var(--primary-dark);
+      color: rgba(255, 255, 255, 0.85);
+      padding: 48px 0 32px;
+    }
+
+    .footer-inner {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 32px;
+      margin-bottom: 36px;
+    }
+
+    .footer-brand .logo {
+      color: white;
+      margin-bottom: 8px;
+    }
+
+    .footer-brand .logo span {
+      color: #C9A227;
+    }
+
+    .footer-brand p {
+      font-size: 0.95rem;
+      max-width: 280px;
+      opacity: 0.8;
+    }
+
+    .footer-links h4 {
+      font-size: 0.85rem;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      margin-bottom: 14px;
+      color: rgba(255, 255, 255, 0.6);
+    }
+
+    .footer-links a {
+      display: block;
+      font-size: 0.95rem;
+      margin-bottom: 8px;
+      opacity: 0.85;
+      transition: opacity 0.2s;
+    }
+
+    .footer-links a:hover {
+      opacity: 1;
+    }
+
+    .footer-bottom {
+      border-top: 1px solid rgba(255, 255, 255, 0.12);
+      padding-top: 24px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 12px;
+      font-size: 0.9rem;
+      opacity: 0.7;
+    }
+
+    .footer-bottom a {
+      color: #C9A227;
+    }
+
+    /* ========== RESPONSIVE ========== */
+    @media (max-width: 900px) {
+      .why-grid {
+        grid-template-columns: 1fr;
+      }
+      .process-steps {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 640px) {
+      nav {
+        display: none;
+      }
+      .hero {
+        padding: 60px 0 70px;
+      }
+      .process-steps {
+        grid-template-columns: 1fr;
+      }
+      .honest-box {
+        padding: 36px 24px;
+      }
+      .footer-inner {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <div class="container header-inner">
+      <a href="index.html" class="logo">
+        Both Sides <span>of the Hire</span>
+        <div class="logo-sub">For Filipino Virtual Assistants</div>
+      </a>
+      <nav>
+        <a href="#why">Why Join</a>
+        <a href="#how">How It Works</a>
+        <a href="#honest">Honest Talk</a>
+        <a href="apply.html" class="btn btn-primary btn-sm">Join the Talent Pool</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-content">
+        <div class="hero-badge">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+          Founded 2018 · 300+ VAs placed
+        </div>
+        <h1>Want to be hired the <span class="highlight">right</span> way?</h1>
+        <p class="hero-sub">
+          We’re building a pool of strong Filipino virtual assistants. When a client needs your specific skills and style, we pull from people who already showed up ready — and we help you present your strengths clearly.
+        </p>
+        <div class="hero-ctas">
+          <a href="apply.html" class="btn btn-primary">Join the Talent Pool →</a>
+          <a href="#how" class="btn btn-outline">See how it works</a>
+        </div>
+        <p class="hero-note">
+          Free resume optimization for matching clients. Be patient — we scale with quality, not speed.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- TRUST BAR -->
+  <div class="trust-bar">
+    <div class="container trust-bar-inner">
+      <div class="trust-item">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>
+        Free resume help for client fits
+      </div>
+      <div class="trust-item">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>
+        Matched by hand, not algorithms
+      </div>
+      <div class="trust-item">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>
+        American leadership + Filipino insight
+      </div>
+      <div class="trust-item">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>
+        Long-term relationships preferred
+      </div>
+    </div>
+  </div>
+
+  <!-- WHY JOIN -->
+  <section class="why" id="why">
+    <div class="container">
+      <div class="text-center">
+        <div class="section-label">Why join us</div>
+        <h2 class="section-title">This is not a job board</h2>
+        <p class="section-sub">
+          We don’t blast your résumé to everyone. We keep a curated pool and match carefully when a real client need appears.
+        </p>
+      </div>
+
+      <div class="why-grid">
+        <div class="why-card">
+          <div class="why-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+          </div>
+          <h3>Free resume optimization</h3>
+          <p>When a client asks for a specific niche, we update your materials to highlight the strengths that client actually cares about — at no cost to you.</p>
+        </div>
+
+        <div class="why-card">
+          <div class="why-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          </div>
+          <h3>Real matching, not volume</h3>
+          <p>George and Caroline personally review candidates. We care about fit — skills, personality, work style — so both sides can succeed long-term.</p>
+        </div>
+
+        <div class="why-card">
+          <div class="why-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          </div>
+          <h3>Be patient. Quality scales slowly</h3>
+          <p>We will not promise instant placement. As we grow more clients, qualified VAs in the pool get first look. Waiting is part of building something solid.</p>
+        </div>
+
+        <div class="why-card">
+          <div class="why-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+          </div>
+          <h3>Honest conversation</h3>
+          <p>Watch our YouTube channel “Both Sides of the Hire.” We talk openly about what clients want and what helps VAs stand out — no fluff.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS -->
+  <section class="process" id="how">
+    <div class="container">
+      <div class="text-center">
+        <div class="section-label">The process</div>
+        <h2 class="section-title">Simple steps. Clear expectations.</h2>
+        <p class="section-sub">
+          No complicated applications. Just solid information so we can help you when the right opportunity appears.
+        </p>
+      </div>
+
+      <div class="process-steps">
+        <div class="step">
+          <div class="step-number">1</div>
+          <h3>Fill out the form</h3>
+          <p>Tell us your skills, experience, preferred niches, and availability. Be honest and specific.</p>
+        </div>
+        <div class="step">
+          <div class="step-number">2</div>
+          <h3>We review your profile</h3>
+          <p>George and Caroline look at every submission. Strong profiles go into our active talent pool.</p>
+        </div>
+        <div class="step">
+          <div class="step-number">3</div>
+          <h3>We help when needed</h3>
+          <p>If a client request matches your strengths, we may refine your resume for that exact fit — free.</p>
+        </div>
+        <div class="step">
+          <div class="step-number">4</div>
+          <h3>Opportunity when ready</h3>
+          <p>As clients grow, qualified VAs in the pool get considered first. Patience is part of the deal.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HONEST TALK -->
+  <section class="honest" id="honest">
+    <div class="container">
+      <div class="honest-box">
+        <h2>An honest word from us</h2>
+        <p>
+          We’re George and Caroline. We’ve placed more than 300 virtual assistants with businesses since 2018. We know both sides of the desk.
+        </p>
+        <p>
+          If you join the pool, please understand: we are not a high-volume staffing agency that promises jobs next week. We grow carefully. When a client needs someone with your particular strengths, we want you ready and well-presented.
+        </p>
+        <p>
+          We believe people and AI work best as a team. AI is quick at repeated tasks. People bring imagination, care, and a smile at the weekly meeting.
+        </p>
+        <p style="margin-top: 24px; font-weight: 600;">
+          Put your best talents up front. Customize how you present yourself. Become the person a business wants to keep.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FINAL CTA -->
+  <section class="cta-section">
+    <div class="container">
+      <div class="cta-box">
+        <div class="section-label">Ready?</div>
+        <h2 class="section-title">Join the talent pool</h2>
+        <p>
+          It takes a few minutes. The more specific you are about your skills and preferred work, the better we can help when the right client appears.
+        </p>
+        <div class="cta-buttons">
+          <a href="apply.html" class="btn btn-primary">Start the Signup Form →</a>
+        </div>
+        <p class="youtube-note">
+          New videos every week on 
+          <a href="https://www.youtube.com/@BothSidesOfTheHireVA" target="_blank" rel="noopener">Both Sides of the Hire</a> 
+          · Learn what clients really look for.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <div class="logo">Both Sides <span>of the Hire</span></div>
+          <p>Honest talk about hiring and working as a VA — from both sides of the desk. Founded 2018.</p>
+        </div>
+        <div class="footer-links">
+          <h4>For VAs</h4>
+          <a href="apply.html">Join the Talent Pool</a>
+          <a href="#how">How It Works</a>
+          <a href="https://www.youtube.com/@BothSidesOfTheHireVA" target="_blank" rel="noopener">YouTube Channel</a>
+        </div>
+        <div class="footer-links">
+          <h4>For Business Owners</h4>
+          <a href="https://ewcvirtueassist.pages.dev" target="_blank" rel="noopener">EWC Virtue Assist</a>
+          <a href="https://calendly.com/ewcvirtueassist/30min" target="_blank" rel="noopener">Book a Free Call</a>
+        </div>
+        <div class="footer-links">
+          <h4>Contact</h4>
+          <a href="mailto:ewcvirtueassist@gmail.com">ewcvirtueassist@gmail.com</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 Both Sides of the Hire · EWC Virtue Assist</span>
+        <span>Business owners → <a href="https://ewcvirtueassist.pages.dev">ewcvirtueassist.pages.dev</a></span>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

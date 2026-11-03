@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Join the Talent Pool | Both Sides of the Hire</title>
+  <meta name="description" content="Sign up to join the Both Sides of the Hire talent pool for Filipino virtual assistants. Free resume optimization and thoughtful matching." />
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet" />
+  
+  <style>
+    :root {
+      --primary: #0A1F44;
+      --primary-dark: #06152e;
+      --accent: #C9A227;
+      --accent-hover: #b08e1f;
+      --bg: #f8f9fb;
+      --bg-alt: #eef1f6;
+      --text: #1a1a1a;
+      --text-muted: #5a6472;
+      --white: #ffffff;
+      --border: #e2e6ed;
+      --success: #2d6a4f;
+      --radius: 12px;
+      --shadow: 0 4px 24px rgba(15, 76, 92, 0.08);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Inter', system-ui, -apple-system, sans-serif;
+      color: var(--text);
+      background: var(--bg);
+      line-height: 1.6;
+      font-size: 17px;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* HEADER */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 72px;
+      max-width: 1140px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    .logo {
+      font-family: 'Playfair Display', serif;
+      font-weight: 700;
+      font-size: 1.25rem;
+      color: var(--primary);
+      letter-spacing: -0.02em;
+      line-height: 1.2;
+    }
+
+    .logo span {
+      color: var(--accent);
+    }
+
+    .logo-sub {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.7rem;
+      font-weight: 500;
+      color: var(--text-muted);
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 14px 28px;
+      font-weight: 600;
+      font-size: 1rem;
+      border-radius: 8px;
+      border: none;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      text-align: center;
+    }
+
+    .btn-primary {
+      background: var(--accent);
+      color: var(--white);
+      box-shadow: 0 4px 14px rgba(201, 162, 39, 0.3);
+    }
+
+    .btn-primary:hover {
+      background: var(--accent-hover);
+      transform: translateY(-1px);
+      box-shadow: 0 6px 20px rgba(201, 162, 39, 0.35);
+    }
+
+    .btn-sm {
+      padding: 10px 20px;
+      font-size: 0.9rem;
+    }
+
+    /* PAGE HEADER */
+    .page-header {
+      background: linear-gradient(160deg, #0A1F44 0%, #122A5C 50%, #06152e 100%);
+      color: white;
+      padding: 56px 0 48px;
+      text-align: center;
+    }
+
+    .page-header h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.9rem, 4vw, 2.5rem);
+      font-weight: 700;
+      margin-bottom: 12px;
+    }
+
+    .page-header p {
+      font-size: 1.1rem;
+      opacity: 0.92;
+      max-width: 520px;
+      margin: 0 auto;
+    }
+
+    /* FORM SECTION */
+    .form-section {
+      padding: 48px 0 80px;
+    }
+
+    .form-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 40px;
+      box-shadow: var(--shadow);
+    }
+
+    .form-intro {
+      margin-bottom: 32px;
+      padding-bottom: 24px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .form-intro h2 {
+      font-size: 1.35rem;
+      color: var(--primary-dark);
+      margin-bottom: 8px;
+    }
+
+    .form-intro p {
+      color: var(--text-muted);
+      font-size: 1rem;
+    }
+
+    .form-group {
+      margin-bottom: 24px;
+    }
+
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+
+    label {
+      display: block;
+      font-weight: 600;
+      font-size: 0.95rem;
+      color: var(--primary-dark);
+      margin-bottom: 8px;
+    }
+
+    label .required {
+      color: var(--accent);
+    }
+
+    label .optional {
+      font-weight: 400;
+      color: var(--text-muted);
+      font-size: 0.85rem;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    input[type="url"],
+    select,
+    textarea {
+      width: 100%;
+      padding: 12px 16px;
+      font-size: 1rem;
+      font-family: inherit;
+      border: 1.5px solid var(--border);
+      border-radius: 8px;
+      background: var(--bg);
+      color: var(--text);
+      transition: border-color 0.2s, box-shadow 0.2s;
+    }
+
+    input:focus,
+    select:focus,
+    textarea:focus {
+      outline: none;
+      border-color: var(--primary);
+      box-shadow: 0 0 0 3px rgba(15, 76, 92, 0.12);
+      background: white;
+    }
+
+    textarea {
+      min-height: 120px;
+      resize: vertical;
+    }
+
+    .help-text {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      margin-top: 6px;
+    }
+
+    /* Checkbox / Radio groups */
+    .checkbox-group,
+    .radio-group {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .checkbox-item,
+    .radio-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      cursor: pointer;
+    }
+
+    .checkbox-item input,
+    .radio-item input {
+      width: auto;
+      margin-top: 4px;
+      accent-color: var(--primary);
+    }
+
+    .checkbox-item span,
+    .radio-item span {
+      font-size: 0.98rem;
+      color: var(--text);
+    }
+
+    /* Skills tags style */
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+    }
+
+    @media (max-width: 500px) {
+      .skills-grid {
+        grid-template-columns: 1fr;
+      }
+      .form-row {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /* Submit area */
+    .form-actions {
+      margin-top: 36px;
+      padding-top: 28px;
+      border-top: 1px solid var(--border);
+      text-align: center;
+    }
+
+    .form-actions .btn {
+      width: 100%;
+      max-width: 360px;
+      padding: 16px 28px;
+      font-size: 1.05rem;
+    }
+
+    .form-note {
+      margin-top: 16px;
+      font-size: 0.9rem;
+      color: var(--text-muted);
+    }
+
+    /* Success message (hidden by default) */
+    .success-message {
+      display: none;
+      text-align: center;
+      padding: 48px 24px;
+    }
+
+    .success-message.visible {
+      display: block;
+    }
+
+    .success-icon {
+      width: 64px;
+      height: 64px;
+      background: var(--success);
+      color: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 20px;
+      font-size: 1.8rem;
+    }
+
+    .success-message h2 {
+      font-family: 'Playfair Display', serif;
+      color: var(--primary-dark);
+      margin-bottom: 12px;
+    }
+
+    .success-message p {
+      color: var(--text-muted);
+      max-width: 420px;
+      margin: 0 auto 24px;
+    }
+
+    /* FOOTER */
+    footer {
+      background: var(--primary-dark);
+      color: rgba(255, 255, 255, 0.85);
+      padding: 32px 0;
+      text-align: center;
+      font-size: 0.9rem;
+    }
+
+    footer a {
+      color: #C9A227;
+    }
+
+    /* Responsive form card */
+    @media (max-width: 600px) {
+      .form-card {
+        padding: 28px 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <div class="header-inner">
+      <a href="index.html" class="logo">
+        Both Sides <span>of the Hire</span>
+        <div class="logo-sub">For Filipino Virtual Assistants</div>
+      </a>
+      <a href="index.html" class="btn btn-sm" style="background: transparent; color: var(--primary); border: 1.5px solid var(--border);">← Back</a>
+    </div>
+  </header>
+
+  <!-- PAGE HEADER -->
+  <div class="page-header">
+    <div class="container">
+      <h1>Join the Talent Pool</h1>
+      <p>Tell us about your skills and experience. We’ll keep you in mind when the right client needs appear.</p>
+    </div>
+  </div>
+
+  <!-- FORM -->
+  <section class="form-section">
+    <div class="container">
+      <div class="form-card" id="formCard">
+        
+        <div class="form-intro">
+          <h2>VA Interest Form</h2>
+          <p>Please be specific and honest. The more we know, the better we can match you (and help refine your materials when needed). This is free.</p>
+        </div>
+
+        <!-- 
+          FORM HANDLING OPTIONS:
+          1. Formspree (easiest): change action to https://formspree.io/f/YOUR_FORM_ID
+          2. Google Forms: embed or link
+          3. Cloudflare Workers + email / Airtable / Notion
+          For now this is a working front-end form. Replace the action attribute once you choose a backend.
+        -->
+        <form id="vaForm" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+          
+          <!-- Basic Info -->
+          <div class="form-row">
+            <div class="form-group">
+              <label for="fullName">Full Name <span class="required">*</span></label>
+              <input type="text" id="fullName" name="fullName" required placeholder="Juan dela Cruz" />
+            </div>
+            <div class="form-group">
+              <label for="email">Email Address <span class="required">*</span></label>
+              <input type="email" id="email" name="email" required placeholder="you@email.com" />
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="phone">Mobile / WhatsApp <span class="required">*</span></label>
+              <input type="tel" id="phone" name="phone" required placeholder="+63 9XX XXX XXXX" />
+            </div>
+            <div class="form-group">
+              <label for="location">City / Province <span class="required">*</span></label>
+              <input type="text" id="location" name="location" required placeholder="e.g. Cebu City, Cebu" />
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="linkedin">LinkedIn or Portfolio URL <span class="optional">(optional but helpful)</span></label>
+            <input type="url" id="linkedin" name="linkedin" placeholder="https://linkedin.com/in/..." />
+          </div>
+
+          <!-- Experience -->
+          <div class="form-group">
+            <label for="yearsExp">Years of VA / remote work experience <span class="required">*</span></label>
+            <select id="yearsExp" name="yearsExp" required>
+              <option value="">Select...</option>
+              <option value="Less than 1 year">Less than 1 year</option>
+              <option value="1-2 years">1–2 years</option>
+              <option value="3-5 years">3–5 years</option>
+              <option value="5+ years">5+ years</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label>Primary skills & tools you are strong in <span class="required">*</span></label>
+            <p class="help-text" style="margin-bottom: 12px;">Select all that apply</p>
+            <div class="skills-grid checkbox-group">
+              <label class="checkbox-item"><input type="checkbox" name="skills" value="Email & Calendar Management"><span>Email & Calendar Management</span></label>
+              <label class="checkbox-item"><input type="checkbox" name="skills" value="Customer Support / Chat"><span>Customer Support / Chat</span></label>
+              <label class="checkbox-item"><input type="checkbox" name="skills" value="Social Media Management"><span>Social Media Management</span></label>
+              <label class="checkbox-item"><input type="checkbox" name="skills" value="Content Writing / Copywriting"><span>Content Writing / Copywriting</span></label>
+              <label class="checkbox-item"><input type="checkbox" name="skills" value="Data Entry / Research"><span>Data Entry / Research</span></label>
+              <label class="checkbox-item"><input type="checkbox" name="skills" value="Bookkeeping / Invoicing"><span>Bookkeeping / Invoicing</span></label>
+              <label class="checkbox-item"><input type="checkbox" name="skills" value="CRM (HubSpot, Salesforce, etc.)"><span>CRM (HubSpot, Salesforce…)</span></label>
+              <label class="checkbox-item"><input type="checkbox" name="skills" value="Project Management Tools"><span>Project Management Tools</span></label>
+              <label class="checkbox-item"><input type="checkbox" name="skills" value="Graphic Design (Canva, etc.)"><span>Graphic Design (Canva…)</span></label>
+              <label class="checkbox-item"><input type="checkbox" name="skills" value="Video Editing"><span>Video Editing</span></label>
+              <label class="checkbox-item"><input type="checkbox" name="skills" value="Lead Generation / Outreach"><span>Lead Generation / Outreach</span></label>
+              <label class="checkbox-item"><input type="checkbox" name="skills" value="Executive Assistance"><span>Executive Assistance</span></label>
+              <label class="checkbox-item"><input type="checkbox" name="skills" value="Web Development / No-code"><span>Web / No-code tools</span></label>
+              <label class="checkbox-item"><input type="checkbox" name="skills" value="Other"><span>Other (please specify below)</span></label>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="otherSkills">Other skills or tools <span class="optional">(optional)</span></label>
+            <input type="text" id="otherSkills" name="otherSkills" placeholder="e.g. Notion, Zapier, Shopify, QuickBooks..." />
+          </div>
+
+          <div class="form-group">
+            <label for="niches">Preferred niches or industries <span class="required">*</span></label>
+            <textarea id="niches" name="niches" required placeholder="e.g. e-commerce, real estate, coaching, SaaS, legal, healthcare, agencies, personal assistants for executives..."></textarea>
+            <p class="help-text">What kinds of clients or work do you enjoy most?</p>
+          </div>
+
+          <div class="form-group">
+            <label for="availability">Availability <span class="required">*</span></label>
+            <select id="availability" name="availability" required>
+              <option value="">Select...</option>
+              <option value="Full-time (30-40 hrs/week)">Full-time (30–40 hrs/week)</option>
+              <option value="Part-time (15-25 hrs/week)">Part-time (15–25 hrs/week)</option>
+              <option value="Flexible / as needed">Flexible / as needed</option>
+              <option value="Currently employed but open">Currently employed but open to new opportunities</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="timezone">Preferred working hours / timezone overlap <span class="optional">(optional)</span></label>
+            <input type="text" id="timezone" name="timezone" placeholder="e.g. comfortable with US Eastern mornings, or full PH hours" />
+          </div>
+
+          <div class="form-group">
+            <label for="about">Tell us about yourself and your strengths <span class="required">*</span></label>
+            <textarea id="about" name="about" required placeholder="What makes you a strong VA? Any standout results, soft skills, or work style notes? (This helps us match and refine your profile later.)"></textarea>
+          </div>
+
+          <div class="form-group">
+            <label for="resumeLink">Link to current resume / Google Drive / Dropbox <span class="optional">(optional but strongly recommended)</span></label>
+            <input type="url" id="resumeLink" name="resumeLink" placeholder="https://drive.google.com/..." />
+            <p class="help-text">We may update your materials free of charge for specific client matches.</p>
+          </div>
+
+          <div class="form-group">
+            <label class="checkbox-item">
+              <input type="checkbox" name="patience" value="yes" required>
+              <span>I understand this is a talent pool, not an instant job guarantee. I am willing to wait while quality clients are matched. <span class="required">*</span></span>
+            </label>
+          </div>
+
+          <div class="form-group">
+            <label class="checkbox-item">
+              <input type="checkbox" name="consent" value="yes" required>
+              <span>I consent to EWC Virtue Assist / Both Sides of the Hire storing my information for matching purposes. <span class="required">*</span></span>
+            </label>
+          </div>
+
+          <div class="form-actions">
+            <button type="submit" class="btn btn-primary">Submit My Interest →</button>
+            <p class="form-note">We review every submission. You’ll hear from us if there’s a strong fit or if we need more details.</p>
+          </div>
+        </form>
+
+        <!-- Success state (shown via JS or after Formspree redirect) -->
+        <div class="success-message" id="successMessage">
+          <div class="success-icon">✓</div>
+          <h2>Thank you for joining the pool</h2>
+          <p>We’ve received your information. George and Caroline will review it. Please be patient — quality matching takes time, and we appreciate VAs who understand that.</p>
+          <a href="index.html" class="btn btn-primary">Back to Home</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <p>© 2026 Both Sides of the Hire · EWC Virtue Assist</p>
+      <p style="margin-top: 8px; opacity: 0.8;">
+        Business owners → <a href="https://ewcvirtueassist.pages.dev">ewcvirtueassist.pages.dev</a> · 
+        <a href="https://www.youtube.com/@BothSidesOfTheHireVA" target="_blank">YouTube</a>
+      </p>
+    </div>
+  </footer>
+
+  <script>
+    // Simple client-side enhancement. For production, use Formspree, Cloudflare Forms, or a Worker.
+    const form = document.getElementById('vaForm');
+    const successMsg = document.getElementById('successMessage');
+    const formCard = document.getElementById('formCard');
+
+    form.addEventListener('submit', function(e) {
+      // If you have set a real Formspree endpoint, remove this preventDefault
+      // so the form actually submits.
+      // For demo / local testing we show the success state.
+      
+      // Uncomment the next line if you want pure front-end demo behavior:
+      // e.preventDefault(); successMsg.classList.add('visible'); form.style.display = 'none';
+      
+      // With a real Formspree ID the form will POST and you can set 
+      // Formspree's "Thank you" redirect or use their AJAX mode.
+    });
+  </script>
+</body>
+</html>
